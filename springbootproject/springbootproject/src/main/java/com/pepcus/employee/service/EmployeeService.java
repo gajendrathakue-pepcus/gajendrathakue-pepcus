@@ -1,8 +1,6 @@
 package com.pepcus.employee.service;
 
 import java.util.List;
-
-import com.pepcus.employee.modal.Address;
 import com.pepcus.employee.modal.Employee;
 public interface EmployeeService {
 
@@ -12,9 +10,11 @@ public interface EmployeeService {
 
 	String getDeleteEmployeeById(int id);
 
-	Address insertAddress(Address address);
-
 	Employee updateEmployee(Employee employee);
+
+	List<Employee> findAllOrderByNameAsc();
+
+
     
 }
 

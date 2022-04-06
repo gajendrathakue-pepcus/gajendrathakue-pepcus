@@ -11,17 +11,49 @@ import javax.persistence.Table;
 public class Address {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private Integer address_id;
+	private String street1;
+	private String street2;
 	private String city;
 	private String state;
 	private String country;
 
-	public int getId() {
-		return id;
+	public Address(Integer address_id, String street1, String street2, String city, String state, String country) {
+		super();
+		this.address_id = address_id;
+		this.street1 = street1;
+		this.street2 = street2;
+		this.city = city;
+		this.state = state;
+		this.country = country;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public Address() {
+
+	}
+
+	public Integer getAddress_id() {
+		return address_id;
+	}
+
+	public void setAddress_id(Integer address_id) {
+		this.address_id = address_id;
+	}
+
+	public String getStreet1() {
+		return street1;
+	}
+
+	public void setStreet1(String street1) {
+		this.street1 = street1;
+	}
+
+	public String getStreet2() {
+		return street2;
+	}
+
+	public void setStreet2(String street2) {
+		this.street2 = street2;
 	}
 
 	public String getCity() {
@@ -49,7 +81,3 @@ public class Address {
 	}
 
 }
-
-
-
-
